@@ -21,7 +21,7 @@ var cors = require('cors');
 var app = express();
 
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8001);
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
