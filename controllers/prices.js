@@ -72,22 +72,22 @@ exports.getData = function(req, res) {
          */
         var result_values_x = [];
         var result_values_y = [];
-        values_x[values_x.length] = 1568802718000;
-        values_x[values_x.length] = 1537266718000;
         values_x[values_x.length] = 1505730718000;
+        values_x[values_x.length] = 1537266718000;
+        values_x[values_x.length] = 1568802718000;
+        values_x[values_x.length] = 1600425118000;
 
-        for (var v = 0; v <values_length + 3; v++) {
+        for (var v = 0; v <values_length + 4; v++) {
             x = values_x[v];
             y = x * m + b;
             result_values_x.push(new Date(x));
             result_values_y.push(y);
-        }
-        for(var s = 0; s < values_length + 3; s++){
-            values_x[s] = new Date(values_x[s]);
+            values_x[v] = new Date(values_x[v]);
         }
         values_y.push(result_values_y[result_values_x.length-1]);
         values_y.push(result_values_y[result_values_x.length-2]);
         values_y.push(result_values_y[result_values_x.length-3]);
+        values_y.push(result_values_y[result_values_x.length-4]);
 //for next monrth
 //,[result_values_x[result_values_x.length-1],result_values_y[result_values_x.length-1]],[result_values_x[result_values_x.length-2],result_values_y[result_values_x.length-2]],[result_values_x[result_values_x.length-3],result_values_y[result_values_x.length-3]]
         return [values_x,values_y];
