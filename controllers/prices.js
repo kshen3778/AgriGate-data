@@ -32,7 +32,7 @@ exports.getFoodData = function(req, res){
         if(err)
             throw err;
         
-        var dataset = JSON.parse(response);
+        /*var dataset = JSON.parse(response);
         //console.log(response.dataset);
         var values = dataset.dataset.data;
         var xVals = 0;
@@ -46,7 +46,7 @@ exports.getFoodData = function(req, res){
             yVals += myDate;
         }
         
-        res.send(((xVals*yVals) - (xVals*yVals))/(Math.pow(xVals,2) - xSVals));
+        res.send(((xVals*yVals) - (xVals*yVals))/(Math.pow(xVals,2) - xSVals));*/
         //res.send([xVals,yVals]);
     }); 
 };
